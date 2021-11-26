@@ -49,6 +49,10 @@ Kirby::plugin('rasteiner/footnote-mark', []);
 panel.plugin('rasteiner/footnote-mark', {
   thirdParty: {
     marks: {
+      // if you want this plugin to play nice with other marks plugins,
+      // you should keep them with the following line:
+      ...panel.plugins.thirdParty.marks || {},
+
       footnote: {
         get button() {
           return {
@@ -110,4 +114,4 @@ MIT
 ## Credits
 
 - [Roman Steiner](https://getkirby.com/plugins/rasteiner), author
-- [Johann Schopplich](https://github.com/johannschopplich/kirby-writer-marks), sparked the idea & wrote the original example
+- [Johann Schopplich](https://github.com/johannschopplich/kirby-writer-marks), sparked the idea & wrote the original plugin and example
