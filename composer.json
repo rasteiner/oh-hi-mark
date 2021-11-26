@@ -1,0 +1,21 @@
+{
+  "name": "rasteiner/oh-hi-mark",
+  "description": "Enables the inclusion of custom Writer field marks",
+  "type": "kirby-plugin",
+  "license": "MIT",
+  "homepage": "https://getkirby.com/plugins/rasteiner/oh-hi-mark",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Roman Steiner",
+      "email": "roman@toastlab.ch",
+      "homepage": "https://getkirby.com/plugins/rasteiner"
+    }
+  ],
+  "require": {
+    "getkirby/composer-installer": "^1.2"
+  },
+  "extra": {
+    "installer-name": "oh-hi-mark"
+  }
+}
