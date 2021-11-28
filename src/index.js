@@ -18,11 +18,13 @@ panel.plugin('rasteiner/oh-hi-mark', { use: [
             return originalMarks;
           }
 
-          const markProto = originalMarks[0].__proto__.__proto__;
+          const markProto = Object.getPrototypeOf(
+              Object.getPrototypeOf(originalMarks[0])
+            );
 
           for (const [name, mark] of Object.entries(marks)) {
             originalMarks = originalMarks.filter(m => m.name !== name);
-            mark.__proto__ = markProto;
+            Object.setPrototypeOf(mark, markProto);
           }
 
           return [
