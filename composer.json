@@ -4,7 +4,7 @@
   "type": "kirby-plugin",
   "license": "MIT",
   "homepage": "https://getkirby.com/plugins/rasteiner/oh-hi-mark",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     {
       "name": "Roman Steiner",

@@ -1,8 +1,8 @@
 panel.plugin('rasteiner/oh-hi-mark', { use: [
   function(Vue) {
     //only start when custom marks are set up
-    const marks = panel.plugins.thirdParty.marks;
-    if(!(marks)) return;
+    const customMarks = panel.plugins.thirdParty.marks;
+    if(!(customMarks)) return;
 
     const original = Vue.component('k-writer');
 
@@ -19,12 +19,13 @@ panel.plugin('rasteiner/oh-hi-mark', { use: [
           }
 
           const markProto = Object.getPrototypeOf(
-              Object.getPrototypeOf(originalMarks[0])
-            );
+            Object.getPrototypeOf(originalMarks[0])
+          );
 
-          for (const [name, mark] of Object.entries(marks)) {
-            originalMarks = originalMarks.filter(m => m.name !== name);
-            Object.setPrototypeOf(mark, markProto);
+          const marks = {};
+
+          for (const [name, mark] of Object.entries(customMarks)) {
+            marks[name] = Object.create(markProto, Object.getOwnPropertyDescriptors(mark));
           }
 
           return [
