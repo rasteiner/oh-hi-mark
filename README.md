@@ -1,3 +1,7 @@
+> # Archived
+> 
+> Please use [Johann Schopplich's plugin](https://github.com/johannschopplich/kirby-writer-marks)
+
 # Kirby oh-hi-mark plugin
 
 Enables the inclusion of custom Writer field marks. It's an alternative to [Johann Schopplich's plugin](https://github.com/johannschopplich/kirby-writer-marks) that doesn't require to patch Kirby's panel dist files.
